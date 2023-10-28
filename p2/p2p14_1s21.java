@@ -4,7 +4,7 @@ public class p2p14_1s21{
 	public static void main(String[] args) {
 	Scanner teclado=new Scanner(System.in);
 	int[][] Ma, Mb, Mc;
-	int fa,ca,fb,cb,f,c, r;
+	int fa,ca,fb,cb,f,c, r=0, h;
 	System.out.println("Ingresa el numero de filas para Matriz A");
 	fa = teclado.nextInt();
 	System.out.println("Ingresa el numero de columnas para la matriz A");
@@ -14,9 +14,9 @@ public class p2p14_1s21{
 	System.out.println("Ingresa el numero de columnas para la matriz B");
 	cb = teclado.nextInt();
 	if (ca==fb){
-		Ma= int [fa][ca];
-		Mb= int [fb][cb];
-		Mc= int [fa][cb];
+		Ma= new int [fa][ca];
+		Mb= new int [fb][cb];
+		Mc= new int [fa][cb];
 		for (f=0;f<fa;f++){
 			for(c=0;c<ca;c++){
 				System.out.println("Ingresa el valor para Ma["+f+"]["+c+"]: ");
@@ -35,6 +35,8 @@ public class p2p14_1s21{
 				for(h=0;h<fb;h++){
 					r=Ma[f][h]*Mb[c][h];
 			}
+			Mc[f][c]=r;
+			System.out.println("El resultado es: "+ r);
 		}
 	}
 	}else{
