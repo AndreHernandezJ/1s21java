@@ -34,9 +34,17 @@ public class p2p14_1s21{
 			for(c=0;c<cb;c++){
 				for(h=0;h<fb;h++){
 					r=Ma[f][h]*Mb[c][h];
-			}
+					System.out.print("a["+f+"]["+h+"] * ");
+					System.out.println("b["+h+"]["+c+"]("+Mb[h][c]+")");
+				}
+				System.out.println("------------------------------------------");
 			Mc[f][c]=r;
-			System.out.println("El resultado es: "+ r);
+			r=0;
+		}
+	}
+			for (f=0;f<fa;f++){
+				for(c=0;c<cb;c++){
+				System.out.println("el resultado para MC["+f+"]["+c+"]: "+Mc[f][c]);
 		}
 	}
 	}else{
